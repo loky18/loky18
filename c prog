@@ -1,0 +1,22 @@
+//1.average of odd numbers below the given range.
+#include<stdio.h>
+int main()
+{
+    int n,a,b;
+    float avg;
+    scanf("%d",&n);
+    for(int i=0;i<=n;i++)
+    {
+        if(i%2!=0)
+        {
+            a=a+i;
+            b++;
+        }
+    }
+    avg=a/b;
+    printf("%d\n",a);
+    printf("average: %.2f",avg);
+    return 0;
+}
+
+
