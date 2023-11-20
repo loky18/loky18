@@ -1,0 +1,160 @@
+//1.area&perimeter of area&rectangle
+#include<stdio.h>
+int main()
+{
+    int l,b,a;
+    printf("enter the side of a square:\n");
+    scanf("%d",&a);
+    printf("enter the length l and breadth b of the recatangle:\n");
+    scanf("%d%d",&l,&b);
+    printf("the Area and Perimeter of the square are %d and %d\n",a*a,2*a);
+    printf("the Area and Perimeter of the rectangle are %d and %d",l*b,2*(l+b));
+    return 0;
+}
+//2.biggest among three numbers
+#include <stdio.h>
+int main()
+{
+    int a,b,c;
+    printf("Enter the number for a :\n");
+    scanf("%d",&a);
+    printf("Enter the number for b :\n");
+    scanf("%d",&b);
+    printf("Enter the number for c :\n");
+    scanf("%d",&c);
+    if(a>b && a>c)
+    {
+        printf("%d is greater than %d and %d\n",a,b,c);
+    }
+    else if (b>a && b>c)
+    {
+        printf("%d is greater than %d and %d\n",b,c,a);
+    }
+    else
+    {
+        printf("%d is greater than %d and %d",c,a,b);
+    }
+}
+//3.multiplication table for the given number
+#include <stdio.h>
+int main()
+{
+    int a;
+    printf("Enter the number. for the table : ");
+    scanf("%d",&a);
+    for(int i=0;i<=10;i++)
+    {
+        printf("%d x %d = %d \n",a,i,a*i);
+    }
+}
+//4.even number in the given range 
+#include <stdio.h>
+int main()
+{
+    int a,n;
+    printf("Enter the number : \n");
+    scanf("%d",&a);
+    printf("The even number in the given range is : \n");
+    for (int i =1;i<=a;i++)
+    {
+        if(i%2==0)
+        {
+            
+            
+            printf("%d \n",i);
+        }
+    }
+    
+}
+//5.net salary
+#include <stdio.h>
+
+int main()
+{
+	float b, da, hra, ta, others,m,n,o;
+	float pf,it;
+	float ns;
+	printf("Enter Basic Salary : \n");
+	scanf("%f",&b);
+	printf("Enter HRA : \n");
+	scanf("%f",&hra);
+	printf("Enter TA : \n");
+	scanf("%f",&ta);	
+	printf("Enter others : \n");
+	scanf("%f",&others);
+	printf("DA % \n");
+	scanf("%d",&n);
+	printf("pf % \n");
+	scanf("%d",&m);
+	printf("it % \n");
+	scanf("%d",&o);
+	
+	da = (b*n)/100;
+	pf = (b*m)/100;
+	it = (b*o)/100;
+	ns = b + da + hra + ta + others - (pf+it);
+	printf("Net Salary is: %.02f",ns);
+	
+	return 0;
+}
+//6.std grade status
+#include <stdio.h>
+int main()
+{
+    int a,b,c,d,e,f;
+    printf("Enter the 1st sub mark[out of 100] : \n");
+    scanf("%d",&a);
+    printf("Enter the 2nd sub mark[out of 100] : \n");
+    scanf("%d",&b);
+    printf("Enter the 3rd sub mark[out of 100] : \n");
+    scanf("%d",&c);
+    if (a >= 40 && b>=40 && c>=40)
+    {
+        printf("You passed in all exams\n");
+    }
+    else if ( a<40&&b<40&&c<40)
+    {
+        printf("You failed in one or more exams\n");
+    }
+    else
+    {
+        printf("You failed in all exams\n");
+    }
+    
+}
+//7.amstrong number
+# include <stdio.h>
+int main()
+{
+    int a,b,c,d,e,f;
+    printf("Enter any number [three digit number] : \n");
+    scanf("%d",&a);
+    b=a%10;
+    c=a/10;
+    d=c%10;
+    e=c/10;
+    f=(b*b*b)+(d*d*d)+(e*e*e);
+    if(a==f)
+    {
+        printf("%d is an armstrong number\n",f);
+    }
+    else{
+        printf("%d is not an armstrong number \n the ans is %d",a,f);    }
+}
+//8.without using len function
+#include <stdio.h>
+int main()
+{
+    char a[10000];
+    int l=0;
+    printf("Enter anything : \n");
+    scanf("%s",a);
+    for(int i=0; a[i]!='\0'; i++)
+    {
+        l=l+1;
+    }
+    
+    printf("Length is %d",l);
+}
+
+
