@@ -1,4 +1,4 @@
-//1.call by reference.
+//1.call by value.
 #include<stdio.h>
 void inc(int n)
 {    
@@ -16,12 +16,12 @@ int main()
     printf("\nafter increment in main:%d",n);
     
 }
-//2.call by value.
+//2.call by reference
 #include<stdio.h>
-void inc(int n)
+void inc(int *n)
 {    
-    n=n+1;
-    printf("\nafter increment:%d",n);
+    *n=*n+1;
+    printf("\nafter increment:%d",*n);
 }
 int main()
 {
@@ -29,8 +29,8 @@ int main()
     printf("enter n:");
     scanf("%d",&n);
     printf("\nbefore increment:%d",n);
-    inc(n);
-    
+    inc(&n);
+    printf("\nafter increment in main:%d",n);
     
 }
 //3.area of square by using function.
